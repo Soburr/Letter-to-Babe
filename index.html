@@ -231,14 +231,20 @@
     const music = document.getElementById("bgMusic");
     const imageEl = document.getElementById("memoryImage");
 
-    const messages = [
-      "Hey Mayrie 💕✨",
-      "So... remember when we met a few months ago? 🌟",
-      "Somehow, you became my favorite person 💖",
-      "This remains my favorite image of all time... 📸💫",
-      "Okay... So I have a question for you 👉👈",
-      "Will you be my Valentine? 🌹💝"
-    ];
+const messages = [
+  "Hey Mayrie 💕✨.",
+
+  "So… remember when we met a couple of months ago? 🌟\nI didn’t expect much, but somehow that moment stayed with me.",
+
+  "Somewhere between the conversations and the laughs,\nyou quietly became my favorite person 💖",
+
+  "This picture right here means a lot to me 📸💫\nIt reminds me of how naturally happy I feel around you.",
+
+  "Okay… I won’t overthink this 👉👈\nThere’s something I’ve been wanting to ask you.",
+
+  "So here it is… straight from my heart 🌹💝\nWill you be my Valentine?"
+];
+
 
     let step = 0;
     messageEl.textContent = messages[step];
@@ -258,7 +264,7 @@
       }
 
       // Show image on the special message
-      if (messages[step] && messages[step].includes("favorite image")) {
+      if (step === 3) {
         imageEl.src = "image.jpeg";
         imageEl.style.display = "block";
       }
